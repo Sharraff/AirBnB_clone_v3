@@ -49,7 +49,7 @@ def get_user_id(user_id):
         if put is None or type(put) != dict:
             return jsonify({'error': 'Not a JSON'}), 400
         for key, value in put.items():
-            if key not in ['id', 'created_at', 'updated_at']:
+            if key not in ['id', 'email', 'created_at', 'updated_at']:
                 setattr(user, key, value)
                 storage.save()
         return jsonify(user.to_dict()), 200

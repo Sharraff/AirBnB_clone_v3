@@ -11,7 +11,8 @@ from models.state import State
 
 @app_views.route('/states', methods=['GET', 'POST'], strict_slashes=False)
 def states():
-    """Create a new view for State objects that handles all default
+    """
+    Create a new view for State objects that handles all default
     RestFul API actions.
     """
     if request.method == 'GET':
